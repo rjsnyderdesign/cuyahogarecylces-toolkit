@@ -1,0 +1,418 @@
+/*!
+ * CuyahogaRecycles.org theme
+ */
+
+//
+// Load core variables and mixins
+// --------------------------------------------------
+
+@import "variables.less";
+@import "mixins.less";
+
+
+//
+// Colors
+// --------------------------------------------------
+
+.pal-default { color: @gray;  }
+.pal-inverse { color: @white; }
+
+.bg-white   { background-color: @white; }
+.bg-green-1 { background-color: @ccswd-green-1; }
+.bg-green-2 { background-color: @ccswd-green-2; }
+.bg-blue    { background-color: @ccswd-blue;    }
+.bg-yellow  { background-color: @ccswd-yellow;  }
+.bg-red     { background-color: @ccswd-red;     }
+.bg-dark    { background-color: @ccswd-dark;    }
+
+
+//
+// Type
+// --------------------------------------------------
+
+h1 {
+  font-weight: bold;
+}
+
+.text-small {
+  font-size: @font-size-small;
+}
+
+.text-large {
+  font-size: @font-size-large;
+}
+
+
+//
+// Layout
+// --------------------------------------------------
+
+.full-height {
+  height: 100%;
+}
+
+
+//
+// Logos
+// --------------------------------------------------
+
+.brand {
+  display: block;
+
+  a,
+  img {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  .brand-logo-main {
+    width: 330px;
+    height: 84px;
+  }
+
+  .brand-logo-main-horizontal {
+    width: 516px;
+    height: 84px;
+  }
+
+  .brand-district-logo {
+    width: 372px;
+    height: 96px;
+  }
+}
+
+
+//
+// Buttons
+// --------------------------------------------------
+
+.btn-hollow( @btn-hollow-color, @btn-hollow-hover-color ) {
+  color: @btn-hollow-color;
+  border-color: @btn-hollow-color;
+  padding-left: (@font-size-base * 2.5);
+  padding-right: (@font-size-base * 2.5);
+  margin-top: (-@font-size-base / 2);
+  margin-left: (@font-size-base * 2);
+  margin-right: (@font-size-base * 2);
+  transition: color @link-transition-speed;
+
+  &:focus,
+  &:hover,
+  &:active,
+  &.active {
+    color: @btn-hollow-hover-color;
+    border-color: @btn-hollow-hover-color;
+  }
+}
+
+.btn-hollow-white   {
+  background: rgba( 0, 0, 0, 0.3 );
+  .btn-hollow( @white , @ccswd-green-2 );
+}
+
+.btn-hollow-green-1 { .btn-hollow( @ccswd-green-1 , @white ); }
+.btn-hollow-green-2 { .btn-hollow( @ccswd-green-2 , @white ); }
+.btn-hollow-blue    { .btn-hollow( @ccswd-blue    , @white ); }
+.btn-hollow-yellow  { .btn-hollow( @ccswd-yellow  , @white ); }
+.btn-hollow-red     { .btn-hollow( @ccswd-red     , @white ); }
+.btn-hollow-dark    { .btn-hollow( @ccswd-dark    , @white ); }
+
+
+//
+// Link lists
+// --------------------------------------------------
+
+.generate-inline-link-list() {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+
+  > li {
+    display: inline;
+
+    > a {
+      color: inherit;
+    }
+  }
+}
+
+.inline-link-list {
+  .generate-inline-link-list();
+}
+
+
+//
+// Social media
+// --------------------------------------------------
+
+@social-link-size: (@font-size-base * 1.75);
+
+
+//
+// Page globals
+// --------------------------------------------------
+
+body {
+  color: @gray;
+}
+
+
+//
+// Header
+// --------------------------------------------------
+
+.page-header {
+  color: @white;
+
+  .page-header-upper {
+    padding-top: (@font-size-base * 2);
+
+    .page-header-upper-content {
+      width: 100%;
+      position: relative;
+    }
+
+    .page-header-upper-right {
+      position: absolute;
+      top: 0;
+      right: 0;
+			width: 100%;
+    }
+		
+		.login-link {
+			color: @white;
+			font-size: 12px;
+			font-weight: normal;
+			text-transform: uppercase;
+			margin-right: 20px;
+			padding-top: 7px;
+			
+			&:hover,
+			&:focus {
+				text-decoration: none;
+				color: darken(@brand-info, 15%);
+			}
+		}
+  }
+
+  .page-header-social {
+    float: right;
+		margin-right: 5px;
+
+    > li {
+      margin-right: @font-size-base;
+
+      > a {
+        width: @social-link-size;
+        height: @social-link-size;
+        display: inline-block;
+        border-radius: 50%;
+        border: 2px solid @white;
+        line-height: @social-link-size;
+        text-align: center;
+
+        > .fa.fa-lg {
+          vertical-align: baseline;
+        }
+      }
+    }
+  }
+}
+
+.navbar {
+  font-size: 16px;
+  letter-spacing: @letter-spacing;
+  text-transform: uppercase;
+}
+
+.navbar-nav.navbar-primary > li > a {
+  color: @white;
+  transition: color @link-transition-speed;
+
+  &:before {
+    width: 100%;
+    height: 0;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: @white;
+    content: '';
+    transition: height @link-transition-speed;
+  }
+
+  &:hover {
+    color: @white;
+
+    &:before {
+      height: (@font-size-base / 2);
+    }
+  }
+}
+
+.header-infobar {
+  width: 100%;
+  height: 100%;
+  display: table;
+  border-collapse: collapse;
+
+  .header-infobar-left,
+  .header-infobar-right {
+    height: 100%;
+    display: table-cell;
+    white-space: nowrap;
+    vertical-align: top;
+  }
+
+  .header-infobar-left {
+    width: 1%;
+  }
+
+  .header-infobar-right {
+    width: 100%;
+  }
+}
+
+.city-recycling-button {
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: @navbar-padding-vertical (@grid-gutter-width / 2);
+  background: @ccswd-green-2;
+  border-right: 2px solid @ccswd-green-1;
+  color: @ccswd-green-1;
+  transition: color @link-transition-speed;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: @white;
+    text-decoration: none;
+  }
+}
+
+
+
+//
+// Slide Revel Panel
+// --------------------------------------------------
+
+.slidereveal-panel {
+	padding: 60px 20px 0;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+	
+	.search-container {
+		width: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 0;
+		input[type="text"] {
+			height: 100%;
+			width: 100%;
+			font-size: @font-size-base;
+			padding: 15px 50px 15px 20px;
+	    border: none;
+	    background: @brand-success;
+	    color: @brand-primary;
+	    outline: none;
+	    box-shadow: none;
+			margin: 0;
+        .placeholder-color(@brand-primary);
+		}
+
+		i {
+			position: absolute;
+			top: 50%;
+			right: 22px;
+	    margin-top: -10px;
+	    font-size: 20px;
+			color: @brand-primary;
+		}
+	}
+	
+	.full-width-button {
+		width: 100%;
+		background: @brand-success;
+    height: 50px;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    padding-left: 20px;
+		a {
+			display: block;
+	    height: 100%;
+	    width: 100%;
+	    line-height: 50px;
+			transition: color 500ms;
+			&:hover,
+			&:focus {
+				color: @white;
+				font-weight: normal;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.close-button {
+		font-size: 30px;
+		font-weight: normal;
+		color: @brand-success;
+	}
+}
+
+
+//
+// Footer
+// --------------------------------------------------
+
+.page-footer {
+  .page-footer-col {
+    padding-top: 64px;
+    padding-bottom: 96px;
+
+    dt {
+      text-transform: uppercase;
+    }
+
+    dd {
+      margin-bottom: @font-size-base;
+    }
+
+    .page-footer-nav {
+      margin-bottom: 0;
+      padding-left: 0;
+      line-height: 2;
+      list-style: none;
+      text-transform: uppercase;
+
+      > li > a {
+        color: @gray;
+      }
+    }
+  }
+
+  .page-footer-col-siteinfo {
+    padding-top: @font-size-base;
+    padding-bottom: @font-size-base;
+    background: @gray-light;
+  }
+
+  .page-footer-social {
+    > li {
+      margin-right: (@font-size-base / 2);
+    }
+  }
+
+  .page-footer-nav-siteinfo {
+    > li:not(:last-child):after {
+      content: '|';
+      margin: 0 (@font-size-base / 2);
+    }
+  }
+}
