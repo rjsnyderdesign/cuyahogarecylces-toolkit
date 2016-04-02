@@ -9,6 +9,13 @@
 @import "variables.less";
 @import "mixins.less";
 
+html {
+	background: @gray-light;
+}
+
+main {
+	padding-bottom: 50px;
+}
 
 //
 // Colors
@@ -61,24 +68,14 @@ h1 {
 
   a,
   img {
-    display: block;
+    display: inline-block;
     margin: 0;
     padding: 0;
   }
 
   .brand-logo-main {
-    width: 330px;
-    height: 84px;
-  }
-
-  .brand-logo-main-horizontal {
-    width: 516px;
-    height: 84px;
-  }
-
-  .brand-district-logo {
-    width: 372px;
-    height: 96px;
+    width: 200px;
+    height: auto;
   }
 }
 
@@ -86,6 +83,20 @@ h1 {
 //
 // Buttons
 // --------------------------------------------------
+
+.btn-green {
+	background: @brand-success;
+	color: @white;
+	margin: 3em 0 2em;
+	text-transform: uppercase;
+	width: 100%;
+	
+	&:hover,
+	&:focus {
+		color: @white;
+		background: fade(@brand-success, 80%);
+	}
+}
 
 .btn-hollow( @btn-hollow-color, @btn-hollow-hover-color ) {
   color: @btn-hollow-color;
@@ -118,6 +129,220 @@ h1 {
 .btn-hollow-red     { .btn-hollow( @ccswd-red     , @white ); }
 .btn-hollow-dark    { .btn-hollow( @ccswd-dark    , @white ); }
 
+h2 {
+	color: @brand-info;
+	text-transform: uppercase;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 0 0 1em;
+	letter-spacing: .05em;
+}
+
+
+//
+// Login
+// --------------------------------------------------
+.login-form {
+	margin: 0 auto;
+	float: none;
+	padding-top: 100px;
+	letter-spacing: .05em;
+	
+	input, label, select {
+		display: block;
+		width: 100%;
+	}
+	
+	input[type="text"],
+	input[type="password"],
+	select {
+		border: 1px solid @brand-dark;
+		border-radius: 1px;
+		background: none;
+		margin-bottom: 1.5em;
+		padding: 6px 10px;
+	}
+	
+	input[type="password"] {
+		margin-bottom: 2.5em;
+	}
+	
+	.select-container {
+		width: 100%;
+		display: block;
+		height: 34px;
+		position: relative;
+		i {
+			color: @brand-success;
+			position: absolute;
+			top: 50%;
+			right: 10px;
+			font-size: 20px;
+			margin-top: -10px;
+		}
+	}
+	
+	select {
+		-webkit-appearance: none;
+		height: 100%;
+	}
+	
+	label {
+		text-transform: none;
+		font-weight: normal;
+	}
+	
+	.btn, a {
+		display: block;
+	}
+	
+	.btn-green {
+		width: 200px;
+	}
+	
+	.forgot {
+		font-size: .9em;
+		color: @brand-info;
+	}
+	
+}
+
+//
+// Available Materials
+// --------------------------------------------------
+.available-materials {
+	padding-top: 70px;
+	letter-spacing: .05em;
+	
+	.col-sm-4,
+	.col-md-4 {
+		padding: 0 20px 0 0;
+		margin-bottom: 20px;
+	}
+	
+	.material {
+		position: relative;
+		display: block;
+		overflow: hidden;
+		
+		.thumbnail {
+			box-shadow: none;
+			border: 1px solid @brand-dark;
+			border-radius: 1px;
+			margin: 0;
+		}
+		
+		&:hover,
+		&:focus {
+			.title {
+				top: 0;
+			}
+		}
+		
+		.title {
+			display: block;
+			height: 100%;
+			width: 100%;
+			background: @brand-success;
+			color: @white;
+			text-transform: uppercase;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			transition: 300ms all;
+			
+			h3 {
+				position: absolute;
+				font-size: 14px;
+				bottom: 1em;
+				padding-left: 1em;
+				width: 100%;
+				margin: 0;
+			}
+		}
+	}
+}
+
+
+//
+// Modal
+// --------------------------------------------------
+.modal-header {
+	border-bottom: 1px solid @brand-dark;
+	padding: 10px 0;
+	
+	.close {
+		background: @brand-danger;
+		text-align: center;
+		height: 30px;
+		width: 30px;
+		line-height: 30px;
+		color: @white;
+		border-radius: 100%;
+		opacity: 1;
+		position: relative;
+		
+		&:hover,
+		&:focus {
+			opacity: .7;
+		}
+		
+		span {
+	    top: 50%;
+	    position: absolute;
+	    left: 0;
+			margin: -16px 0 0 0;
+			font-weight: normal;
+	    font-size: 20px;
+			text-align: center;
+	    width: 100%;
+		}
+	}
+}
+
+.modal-content {
+	padding: 20px;
+	letter-spacing: .05em;
+	
+	.modal-body {
+		padding-top: 25px;
+	}
+	
+	img {
+		max-width: 100%;
+		border: 1px solid @brand-dark;
+	}
+	
+	.row {
+		margin: 0 -15px;
+	}
+	
+	.col-md-8,
+	.col-md-4 {
+		padding: 0 20px 0 0;
+	}
+	
+	.col-md-4 {
+		padding: 0;
+	}
+	
+	label {
+		font-weight: normal;
+		font-size: 12px;
+	}
+	
+	p {
+		font-size: 11px;
+		
+		&.spec {
+			text-transform: uppercase;
+		}
+	}
+	
+	.btn {
+		padding: 12px 0;
+	}
+}
 
 //
 // Link lists
@@ -167,6 +392,7 @@ body {
 
   .page-header-upper {
     padding-top: (@font-size-base * 2);
+    padding-bottom: (@font-size-base * 2);
 
     .page-header-upper-content {
       width: 100%;
@@ -372,6 +598,7 @@ body {
 // --------------------------------------------------
 
 .page-footer {
+	
   .page-footer-col {
     padding-top: 64px;
     padding-bottom: 96px;
@@ -399,7 +626,7 @@ body {
 
   .page-footer-col-siteinfo {
     padding-top: @font-size-base;
-    padding-bottom: @font-size-base;
+    padding-bottom: (@font-size-base * 4);
     background: @gray-light;
   }
 
