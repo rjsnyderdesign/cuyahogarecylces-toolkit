@@ -63,9 +63,33 @@
 					<div class="col-md-10 col-sm-12 col-md-offset-1 available-materials">
 						<h2>Available Materials:</h2>
 	          <div class="col-md-4 col-sm-4 end">
-							<a href="#" class="material" data-toggle="modal" data-target="#firstModal">
+							<a href="#" class="material">
 								<div class="thumbnail">
-									<img src="../root/img/materials/postcard-back-1.jpg" />
+									<img src="http://placehold.it/375x200" />
+								</div>
+								<div class="title">
+									<h3>
+										CCSWD Toolki Guidelines
+									</h3>
+								</div>
+							</a>
+	          </div><!-- /.col-*-* -->
+	          <div class="col-md-4 col-sm-4 end">
+							<a href="#" class="material">
+								<div class="thumbnail">
+									<img src="http://placehold.it/375x200" />
+								</div>
+								<div class="title">
+									<h3>
+										CCSWD Logos
+									</h3>
+								</div>
+							</a>
+	          </div><!-- /.col-*-* -->
+	          <div class="col-md-4 col-sm-4 end">
+							<a href="#" class="material" data-toggle="modal" data-target="#icon-modal">
+								<div class="thumbnail">
+									<img src="../root/img/materials/thumb-icons.jpg" />
 								</div>
 								<div class="title">
 									<h3>
@@ -77,11 +101,11 @@
 	          <div class="col-md-4 col-sm-4 end">
 							<a href="#" class="material">
 								<div class="thumbnail">
-									<img src="../root/img/materials/postcard-back-1.jpg" />
+									<img src="http://placehold.it/375x200" />
 								</div>
 								<div class="title">
 									<h3>
-										Cuyahoga County<br />Solid Waste District<br />Recycling Icons
+										Pop-up Banner
 									</h3>
 								</div>
 							</a>
@@ -89,47 +113,23 @@
 	          <div class="col-md-4 col-sm-4 end">
 							<a href="#" class="material">
 								<div class="thumbnail">
-									<img src="../root/img/materials/postcard-back-1.jpg" />
+									<img src="http://placehold.it/375x200" />
 								</div>
 								<div class="title">
 									<h3>
-										Cuyahoga County<br />Solid Waste District<br />Recycling Icons
+										Magnet
 									</h3>
 								</div>
 							</a>
 	          </div><!-- /.col-*-* -->
 	          <div class="col-md-4 col-sm-4 end">
-							<a href="#" class="material">
+							<a href="#" class="material" data-toggle="modal" data-target="#postcard-modal">
 								<div class="thumbnail">
-									<img src="../root/img/materials/postcard-back-1.jpg" />
+									<img src="../root/img/materials/thumb-postcard.jpg" />
 								</div>
 								<div class="title">
 									<h3>
-										Cuyahoga County<br />Solid Waste District<br />Recycling Icons
-									</h3>
-								</div>
-							</a>
-	          </div><!-- /.col-*-* -->
-	          <div class="col-md-4 col-sm-4 end">
-							<a href="#" class="material">
-								<div class="thumbnail">
-									<img src="../root/img/materials/postcard-back-1.jpg" />
-								</div>
-								<div class="title">
-									<h3>
-										Cuyahoga County<br />Solid Waste District<br />Recycling Icons
-									</h3>
-								</div>
-							</a>
-	          </div><!-- /.col-*-* -->
-	          <div class="col-md-4 col-sm-4 end">
-							<a href="#" class="material">
-								<div class="thumbnail">
-									<img src="../root/img/materials/postcard-back-1.jpg" />
-								</div>
-								<div class="title">
-									<h3>
-										Cuyahoga County<br />Solid Waste District<br />Recycling Icons
+										Postcard
 									</h3>
 								</div>
 							</a>
@@ -150,7 +150,32 @@
     </footer>
 		
 		<!-- .modal -->
-		<div class="modal fade" tabindex="-1" role="dialog" id="firstModal">
+		<div class="modal fade" tabindex="-1" role="dialog" id="icon-modal">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		        <h2 class="modal-title">Recycling Icons</h2>
+		      </div>
+		      <div class="modal-body">
+						<div class="row">
+							<div class="col-md-8">
+								<img src="../root/img/materials/icons-front.jpg" class="no-border" />
+							</div>
+							<div class="col-md-4 pt20">
+				        <label>Details:</label>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada velit non magna auctor bibendum. Duis dictum, urna sed accumsan sollicitudin, lorem velit egestas elit, ac lobortis erat enim posuere arcu. Duis semper congue nisl quis malesuada.
+								</p>
+								<a class="btn btn-green">Download</a>
+							</div>
+						</div>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+		
+		<!-- .modal -->
+		<div class="modal fade" tabindex="-1" role="dialog" id="postcard-modal">
 		  <div class="modal-dialog">
 		    <div class="modal-content">
 		      <div class="modal-header">
@@ -160,15 +185,47 @@
 		      <div class="modal-body">
 						<div class="row">
 							<div class="col-md-8">
-								<img src="../root/img/materials/icons-front.jpg" />
+								<label>Front</label>
+								<img src="../root/img/materials/postcard-front-1.jpg" />
 							</div>
-							<div class="col-md-4">
+							<div class="col-md-4 pt25 details">
 				        <label>Details:</label>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce malesuada velit non magna auctor bibendum. Duis dictum, urna sed accumsan sollicitudin, lorem velit egestas elit, ac lobortis erat enim posuere arcu. Duis semper congue nisl quis malesuada.
 								</p>
 								<p class="spec">Specs: <span>8.5" X 5.5"</span></p>
-								<button class="btn btn-green btn-double">Download</button>
-
+								<a href="/root/loading.html" class="btn btn-green btn-double">Start<br />Customizing</a>
+							</div>
+						</div>
+						<div class="row bottom-row">
+							<div class="horizontal options">
+								<label>BACK: <span>Choose from Five Options</span></label>
+								<div class="gray-bkgd clearfix">
+									<div class="col-md-x">
+										<a href="#" id="test">
+											<img src="http://placehold.it/375x200" />
+										</a>
+									</div>
+									<div class="col-md-x">
+										<a href="#">
+											<img src="http://placehold.it/375x200" />
+										</a>
+									</div>
+									<div class="col-md-x">
+										<a href="#">
+											<img src="http://placehold.it/375x200" />
+										</a>
+									</div>
+									<div class="col-md-x">
+										<a href="#">
+											<img src="http://placehold.it/375x200" />
+										</a>
+									</div>
+									<div class="col-md-x">
+										<a href="#">
+											<img src="http://placehold.it/375x200" />
+										</a>
+									</div>
+								</div>
 							</div>
 						</div>
 		      </div>
@@ -179,7 +236,14 @@
     <!-- scripts -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type="text/javascript" src="../dist/js/bootstrap.min.js"></script>
+		<script>
+			$('.horizontal.options a').click( function() {
+				$('.horizontal.options').find('a.selected').removeClass('selected');
+				$(this).addClass('selected');
+			});
+		</script>
     <!-- /scripts -->
+		
 
   </body>
 
