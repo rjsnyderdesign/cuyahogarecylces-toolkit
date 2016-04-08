@@ -7366,6 +7366,17 @@ label span {
   padding: 0 20px;
   max-width: 700px;
 }
+.proof-container .col-sm-6 img,
+.proof-container .col-sm-6 div {
+  display: block;
+  margin: 0 auto 10px;
+  max-width: 700px;
+  border: 1px solid #263746;
+  width: 100%;
+}
+.proof-container .col-sm-6 div {
+  border: none;
+}
 .proof-container label {
   font-weight: normal;
 }
@@ -7379,11 +7390,6 @@ label span {
 }
 .proof-container .fa.confirm {
   color: #95d600;
-}
-.proof-container img {
-  max-width: 100%;
-  border: 1px solid #263746;
-  margin-bottom: 10px;
 }
 .popover {
   padding: 15px;
