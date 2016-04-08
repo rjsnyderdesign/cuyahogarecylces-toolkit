@@ -7028,6 +7028,7 @@ h2 {
 .available-materials .col-md-4 {
   padding: 0 20px 0 0;
   margin-bottom: 20px;
+  max-width: 390px;
 }
 .available-materials .material {
   position: relative;
@@ -7363,6 +7364,7 @@ label span {
 }
 .proof-container .col-sm-6 {
   padding: 0 20px;
+  max-width: 700px;
 }
 .proof-container label {
   font-weight: normal;
@@ -7465,7 +7467,7 @@ label span {
   border: 1px solid #263746;
 }
 .vertical-options a.selected img {
-  border-color: #e84b37;
+  border: 1px dashed #e84b37;
 }
 .loading {
   height: 100px;
